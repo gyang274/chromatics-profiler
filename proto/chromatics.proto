@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+// option java_multiple_files = true;
+// option java_package = "io.grpc.chromatics";
+// option java_outer_classname = "ChromaticsProto";
+// option objc_class_prefix = "CHR";
+
+package chromatics;
+
+
+service Profiler {
+  rpc GetChromaticProfile (Image) returns (ChromaticProfile) {}
+}
+
+
+message Image {
+  string b64 = 1;
+}
+
+message ChromaticProfile {
+  message HSLP {
+    float h = 1;
+    float s = 2;
+    float l = 3;
+    float p = 4;
+  }
+  repeated HSLP hslp = 1;
+}
