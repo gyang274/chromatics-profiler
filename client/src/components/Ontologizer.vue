@@ -21,7 +21,7 @@
 </template>
 
 <script>
-  import ontology from './static/ontology.json'
+  import ontology from './Ontologizer/ontology.json'
 
   export default {
     data: () => ({

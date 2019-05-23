@@ -9,15 +9,7 @@
               <apps-ontologizer />
             </v-flex>
             <v-flex xs12 md6>
-              <v-sheet
-                class="d-flex"
-                color="#0808ff"
-                height="424"
-              >
-                <sheet-footer>
-                  TODO: build a color viwer with complementary color, analogous color and etc.
-                </sheet-footer>
-              </v-sheet>
+              <apps-color-schemer />
             </v-flex>
           </v-layout>
         </v-slide-y-transition>
@@ -28,10 +20,13 @@
 
 <script>
   import Ontologizer from '@/components/Ontologizer'
+  import ColorSchemer from '@/components/ColorSchemer'
 
   export default {
     components: {
-      appsOntologizer: Ontologizer
+      appsOntologizer: Ontologizer,
+      appsColorSchemer: ColorSchemer,
     }
   }
+  
 </script>
