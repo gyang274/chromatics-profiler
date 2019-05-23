@@ -5,10 +5,10 @@
         <v-slide-y-transition mode="out-in">
           <v-layout row wrap>
             <v-flex xs12><br><br></v-flex>
-            <v-flex xs12 md6>
+            <v-flex xs12 md4>
               <apps-ontologizer />
             </v-flex>
-            <v-flex xs12 md6>
+            <v-flex xs12 md8>
               <apps-color-schemer />
             </v-flex>
           </v-layout>

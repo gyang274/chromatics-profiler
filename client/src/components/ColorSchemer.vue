@@ -20,28 +20,44 @@
       </v-btn>
     </v-flex>
     <v-flex xs12><br></v-flex>
-    <v-flex xs2>
-      <v-sheet
-        class="d-flex"
-        :color="chex"
+    <v-flex xs12>
+      <img 
+        src="./ColorSchemer/color-scheme.jpg"
+        style='height: 100%; width: 100%; object-fit: contain'
       >
-        <sheet-footer>
-          TODO: build a color viwer with complementary color, analogous color and etc.
-        </sheet-footer>
-      </v-sheet>
     </v-flex>
-
-    
+    <template v-if="dhex !== ''">
+      <v-flex xs12><br></v-flex>
+      <v-flex xs12>
+        <v-sheet
+          class="d-flex"
+          :color="dhex"
+        >
+          <sheet-footer>
+            <h4>
+              &nbsp;&nbsp;TODO: build a color viwer with complementary color, analogous color and etc.
+            </h4>
+          </sheet-footer>
+        </v-sheet>
+      </v-flex>
+    </template>
   </v-layout>
 </template>
 
 <script>
   export default {
     data: () => ({
-      chex: '#ff0808'
+      chex: '#ffffff',
+      dhex: ''
     }),
     computed: {
 
+    },
+    methods: {
+      setColorHexCode (chex) {
+        console.log(`set ${ chex } to dhex`)
+        this.dhex = chex
+      }
     }
   }
 </script>
